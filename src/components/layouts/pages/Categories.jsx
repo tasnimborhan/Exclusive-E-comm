@@ -11,6 +11,9 @@ import  watch from "/src/assets/watch.png"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import NextArrow from '../../NextArrow'
+import PrevArrow from '../../PrevArrow'
+ 
 
 
 
@@ -21,6 +24,8 @@ const Categories = () => {
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 3,
+    nextArrow: <NextArrow />,
+     prevArrow: <PrevArrow/>
   };
   return (
    
@@ -33,7 +38,8 @@ const Categories = () => {
     </Flex>
      </div>
       <div className="py-5"></div>
-       <h3 className="text-3xl font-semibold">Browse By Category</h3>
+       <h3 className="text-3xl font-semibold ">Browse By Category</h3>
+      
      <Slider {...settings} className="py-20">
       <div>
        <Image imgSrc={computer} className="hover:bg-[#DB4444] duration-500 rounded-[5px]"/>
